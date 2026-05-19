@@ -2,10 +2,10 @@ package es.senoret.atraccion;
 
 public class RequisitosAtraccion {
 
-	//TODO: completar con los requisitos especificos...
+	// TODO: completar con los requisitos especificos...
 	private int edadMinima;
 	private int alturaMinima;
-	
+
 	public RequisitosAtraccion(int edadMinima, int alturaMinima) {
 		super();
 		this.edadMinima = edadMinima;
@@ -16,28 +16,20 @@ public class RequisitosAtraccion {
 		return edadMinima;
 	}
 
-
-
 	public void setEdadMinima(int edadMinima) {
 		this.edadMinima = edadMinima;
 	}
-
-
 
 	public int getAlturaMinima() {
 		return alturaMinima;
 	}
 
-
-
 	public void setAlturaMinima(int alturaMinima) {
 		this.alturaMinima = alturaMinima;
 	}
 
-
-
 	public boolean isRequisitosMinimos() {
-		
+
 		return true;
 	}
 }
