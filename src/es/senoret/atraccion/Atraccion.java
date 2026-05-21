@@ -2,6 +2,8 @@ package es.senoret.atraccion;
 
 import java.time.Duration;
 
+import es.senoret.visitante.Visitante;
+
 public class Atraccion {
 	
 	private int ID;
@@ -9,6 +11,7 @@ public class Atraccion {
 	private String descripcion;
 	private TipoAtraccion tipoAtraccion;
 	private int capacidadPorTurno;
+	private int capacidadActual=0;
 	private Duration duracion;
 	private RequisitosAtraccion requisitosAtraccion;
 	
@@ -26,6 +29,29 @@ public class Atraccion {
 		this.capacidadPorTurno = capacidadPorTurno;
 		this.duracion = duracion;
 		this.requisitosAtraccion = requisitosAtraccion;
+	}
+	
+	public boolean usarAtraccion(Visitante visitante) {
+		if(!comprobarAtraccionLibre()) {
+			return false;
+		}
+		if(!comprobarRequisitos(visitante)) {
+			return false;
+		}
+		capacidadActual++;
+		return true;
+	}
+	
+	private boolean comprobarRequisitos(Visitante visitante) {
+		// Comprobar los parametros del visitante con los requisitos de la a atraccion
+		return true;
+	}
+	
+	private boolean comprobarAtraccionLibre() {
+		if(capacidadActual>=capacidadPorTurno) {
+			return false;
+		}
+		return true;
 	}
 
 	public int getID() {

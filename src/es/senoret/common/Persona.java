@@ -4,6 +4,7 @@ public class Persona {
 	private int ID;
 	private String nombre;
 	private String apellido;
+	private String sexo;
 
 	public int getID() {
 		return ID;

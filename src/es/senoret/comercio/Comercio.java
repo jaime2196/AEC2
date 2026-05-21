@@ -3,6 +3,7 @@ package es.senoret.comercio;
 import java.util.List;
 
 import es.senoret.comercio.pedido.Producto;
+import es.senoret.visitante.Visitante;
 
 public abstract class Comercio {
 
@@ -18,8 +19,14 @@ public abstract class Comercio {
 		this.productos = productos;
 	}
 	
-	public void usarProducto(int productoId) {
+	public void usarProducto(Visitante visitante, Producto hamburguesaSinGluten) {
 		// Buscar el producto en la lista de productos del comercio y producto.cantidad--
+		
+	}
+	
+	public String obtenerRecomendaciones(Visitante visitante) {
+		//Genera las recomendaciones en funcion de los parametros del visitantes
+		return "recomendaciones generadas";
 	}
 	
 
