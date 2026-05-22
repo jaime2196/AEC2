@@ -1,11 +1,15 @@
 package es.senoret.visitante;
 
+/**
+ * Clase para gestionar la venta de boletos del parque
+ */
 public class Boleto {
 
 	private int ID;
 	private int precio;
 	private CategoriaBoleto categoriaBoleto;
 	private boolean isValido;
+	private boolean visitaCompletada;
 
 	public enum CategoriaBoleto {
 		ADULTO, NINO, DISCAPACITADO;
@@ -17,10 +21,27 @@ public class Boleto {
 		this.precio = precio;
 		this.categoriaBoleto = categoriaBoleto;
 		this.isValido = true;
+		this.visitaCompletada = false;
+	}
+	
+	public void cierreDeVisita() {
+		this.setVisitaCompletada(true);
+		this.soliciarRetroalimentacion();
+	}
+	
+	/**
+	 * Este metodo solicita la retroalimentacion al usuario.
+	 */
+	public void soliciarRetroalimentacion() {
+		// TODO: implementar logica, mostrar formulario para preguntar al usuario sobre su experiencia
 	}
 
+	/**
+	 * Devuelve true si el boleto es valido, false en cuaquier otro caso
+	 * @return
+	 */
 	public boolean validarBoleto() {
-		//TODO: implementar logica
+		// TODO: implementar logica, el boleto es valido y no ha sido usado todavia
 		return false;
 	}
 
@@ -55,7 +76,13 @@ public class Boleto {
 	public void setValido(boolean isValido) {
 		this.isValido = isValido;
 	}
-	
-	
+
+	public boolean isVisitaCompletada() {
+		return visitaCompletada;
+	}
+
+	public void setVisitaCompletada(boolean visitaCompletada) {
+		this.visitaCompletada = visitaCompletada;
+	}
 
 }

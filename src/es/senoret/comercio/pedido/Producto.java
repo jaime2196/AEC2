@@ -1,5 +1,7 @@
 package es.senoret.comercio.pedido;
-
+/**
+ * Clase basica sobre producto
+ */
 public class Producto {
 
 	private int ID;

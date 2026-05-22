@@ -4,6 +4,10 @@ import java.time.Duration;
 
 import es.senoret.visitante.Visitante;
 
+/**
+ * Clase Atraccion con sus atributos minimos, esta clase se puede instanciar por si misma o 
+ * crear una clase que herede de esta para ampliar su funcionalidad si fuera necesario
+ */
 public class Atraccion {
 	
 	private int ID;
@@ -31,6 +35,11 @@ public class Atraccion {
 		this.requisitosAtraccion = requisitosAtraccion;
 	}
 	
+	/**
+	 * Permite a un usuario utilizar una atracion, comprobando que haya huecos libres en la atraccion y que el visitante se apto para utilizarla
+	 * @param visitante que usa la atraccion
+	 * @return true, si el visitante ha usado la atraccion correctamente, false en caso contrario
+	 */
 	public boolean usarAtraccion(Visitante visitante) {
 		if(!comprobarAtraccionLibre()) {
 			return false;
@@ -42,11 +51,20 @@ public class Atraccion {
 		return true;
 	}
 	
+	/**
+	 * Devulve true si el visitante es apto para usar la atraccion, false en cualquier otro caso
+	 * @param visitante visitante del que se comprueban los requisitos
+	 * @return
+	 */
 	private boolean comprobarRequisitos(Visitante visitante) {
 		// Comprobar los parametros del visitante con los requisitos de la a atraccion
 		return true;
 	}
 	
+	/**
+	 * Comprueba que haya huecos libres para el usuario en la atraccion
+	 * @return
+	 */
 	private boolean comprobarAtraccionLibre() {
 		if(capacidadActual>=capacidadPorTurno) {
 			return false;

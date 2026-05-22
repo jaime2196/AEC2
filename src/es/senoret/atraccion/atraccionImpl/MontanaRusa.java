@@ -6,9 +6,13 @@ import es.senoret.atraccion.Atraccion;
 import es.senoret.atraccion.RequisitosAtraccion;
 import es.senoret.atraccion.interfaces.MantenimientoEspecial;
 import es.senoret.atraccion.interfaces.SeguridadEspecial;
+import es.senoret.common.Persona;
 import es.senoret.common.interfaces.Reservable;
-import es.senoret.visitante.Visitante;
 
+/**
+ * Esta clase extiende de la clase atraccion, la idea es que implemente su propia funcionalidad con el tiempo, ademas de 
+ * implementar varias interfaces que son necesarias
+ */
 public class MontanaRusa extends Atraccion implements MantenimientoEspecial, SeguridadEspecial, Reservable{
 
 	public MontanaRusa(int iD, String nombre, String descripcion, TipoAtraccion tipoAtraccion, int capacidadPorTurno,
@@ -32,7 +36,7 @@ public class MontanaRusa extends Atraccion implements MantenimientoEspecial, Seg
 
 
 	@Override
-	public void hacerReserva(Visitante visitante, String fechaHora) {
+	public void hacerReserva(Persona visitante, String fechaHora) {
 		// TODO implementar la logica para almacenar la reserva
 		
 	}

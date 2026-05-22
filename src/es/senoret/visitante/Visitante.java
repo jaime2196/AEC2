@@ -1,7 +1,9 @@
 package es.senoret.visitante;
 
 import es.senoret.common.Persona;
-
+/**
+ * Clase destinanda a gestionar los atributos de los visitantes, extendiendo la clase persona
+ */
 public class Visitante extends Persona{
 
 	private int edad;

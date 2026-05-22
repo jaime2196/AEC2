@@ -17,6 +17,9 @@ import es.senoret.comercio.comercioImpl.Restaurante.TipoRestaurante;
 import es.senoret.comercio.comercioImpl.Tienda;
 import es.senoret.comercio.pedido.Producto;
 
+/**
+ * Clase de entrada en la aplicacion, con la funcionalidad basica requerida en el enunciado
+ */
 public class Test {
 
 	public static void main(String[] args) {
@@ -58,7 +61,7 @@ public class Test {
 		tiendaSouvenirs.usarProducto(visitante, peluche);
 		
 		// 5) Retroalimentación y Cierre de Visita
-
+		visitante.getBoleto().cierreDeVisita();
 	}
 
 }

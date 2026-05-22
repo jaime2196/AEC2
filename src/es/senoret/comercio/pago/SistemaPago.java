@@ -1,5 +1,8 @@
 package es.senoret.comercio.pago;
 
+/**
+ * Clase abstracta basica con los datos fundamentales de un sistema de pago
+ */
 public abstract class SistemaPago {
 	private int ID;
 	private String cuentaOrigen;

@@ -1,8 +1,10 @@
 package es.senoret.common.interfaces;
 
-import es.senoret.visitante.Visitante;
-
+import es.senoret.common.Persona;
+/**
+ * Interfaz obliga a que una Atraccion o un Restaurante sea reservable
+ */
 public interface Reservable {
 	
-	public void hacerReserva(Visitante visitante, String fechaHora);
+	public void hacerReserva(Persona visitante, String fechaHora);
 }

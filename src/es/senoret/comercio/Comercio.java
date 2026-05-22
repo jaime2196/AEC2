@@ -5,6 +5,9 @@ import java.util.List;
 import es.senoret.comercio.pedido.Producto;
 import es.senoret.visitante.Visitante;
 
+/**
+ * Clase abstracta de comercio, implementa su funcionalidad basica
+ */
 public abstract class Comercio {
 
 	private int ID;
@@ -19,11 +22,21 @@ public abstract class Comercio {
 		this.productos = productos;
 	}
 	
-	public void usarProducto(Visitante visitante, Producto hamburguesaSinGluten) {
+	/**
+	 * Administra un producto a un visitante
+	 * @param visitante que usa el producto
+	 * @param producto a usar
+	 */
+	public void usarProducto(Visitante visitante, Producto producto) {
 		// Buscar el producto en la lista de productos del comercio y producto.cantidad--
 		
 	}
 	
+	/**
+	 * Obtiene las recomendaciones en funcion del visitante
+	 * @param visitante que obtiene las recomentaciones
+	 * @return
+	 */
 	public String obtenerRecomendaciones(Visitante visitante) {
 		//Genera las recomendaciones en funcion de los parametros del visitantes
 		return "recomendaciones generadas";

@@ -2,6 +2,9 @@ package es.senoret.visitante;
 
 import java.util.List;
 
+/**
+ * Esta clase registra las preferencias de usuario del parque
+ */
 public class TarjetaAcceso {
 	private int ID;
 	private List<String> preferenciasUsuario;

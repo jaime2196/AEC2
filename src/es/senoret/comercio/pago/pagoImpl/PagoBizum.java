@@ -1,7 +1,9 @@
 package es.senoret.comercio.pago.pagoImpl;
 
 import es.senoret.comercio.pago.SistemaPago;
-
+/**
+ * Implementacion de sistema de pago mediante bizum
+ */
 public class PagoBizum extends SistemaPago {
 
 	private String numTelefono;

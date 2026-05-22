@@ -4,6 +4,9 @@ import java.util.List;
 
 import es.senoret.visitante.Visitante;
 
+/**
+ * Clase que relaciona el visitante (cliente) con los productos que consume
+ */
 public class Pedido {
 
 	public int ID;

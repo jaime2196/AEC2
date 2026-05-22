@@ -1,5 +1,8 @@
 package es.senoret.atraccion;
 
+/**
+ * Esta clase especifica los requisitos que existen para usar una atraccion
+ */
 public class RequisitosAtraccion {
 
 	// TODO: completar con los requisitos especificos...

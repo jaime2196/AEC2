@@ -1,0 +1,14 @@
+es.senoret
+es.senoret.atraccion
+es.senoret.atraccion.atraccionImpl
+es.senoret.atraccion.interfaces
+es.senoret.comercio
+es.senoret.comercio.comercioImpl
+es.senoret.comercio.pago
+es.senoret.comercio.pago.pagoImpl
+es.senoret.comercio.pedido
+es.senoret.common
+es.senoret.common.interfaces
+es.senoret.evento
+es.senoret.mantenimiento
+es.senoret.visitante

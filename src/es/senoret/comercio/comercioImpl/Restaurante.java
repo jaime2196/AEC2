@@ -4,9 +4,12 @@ import java.util.List;
 
 import es.senoret.comercio.Comercio;
 import es.senoret.comercio.pedido.Producto;
+import es.senoret.common.Persona;
 import es.senoret.common.interfaces.Reservable;
-import es.senoret.visitante.Visitante;
 
+/**
+ * Implementacion basica de un restaurante, extendiendo la funcionalidad basica de la clase comercio
+ */
 public class Restaurante extends Comercio implements Reservable {
 
 	private TipoRestaurante tipoRestaurante;
@@ -29,7 +32,7 @@ public class Restaurante extends Comercio implements Reservable {
 	}
 
 	@Override
-	public void hacerReserva(Visitante visitante, String fechaHora) {
+	public void hacerReserva(Persona visitante, String fechaHora) {
 		// TODO Auto-generated method stub
 
 	}

@@ -2,6 +2,9 @@ package es.senoret.evento;
 
 import java.util.List;
 
+/**
+ * Clase para gestionar los eventos del parque
+ */
 public class Evento {
 	private int ID;
 	private String nombre;
