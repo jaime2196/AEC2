@@ -24,6 +24,15 @@ public class Boleto {
 		this.visitaCompletada = false;
 	}
 	
+	public Boleto(int iD, CategoriaBoleto categoriaBoleto) {
+		super();
+		ID = iD;
+		this.precio = 20;
+		this.categoriaBoleto = categoriaBoleto;
+		this.isValido = true;
+		this.visitaCompletada = false;
+	}
+	
 	public void cierreDeVisita() {
 		this.setVisitaCompletada(true);
 		this.soliciarRetroalimentacion();

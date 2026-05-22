@@ -30,36 +30,38 @@ public class Test {
 		preferenciasUsuario.add("Restaurantes favoritos: Goiko");
 		preferenciasUsuario.add("Atracciones favoritas: montaña rusa");
 		TarjetaAcceso targetAcceso = new TarjetaAcceso(4321, preferenciasUsuario);
-		
+
 		visitante.setBoleto(boleto);
 		visitante.setTarjetaAcceso(targetAcceso);
-		
+
 		// 2) Planificación de la Visita
-		MontanaRusa montanaRusa = new MontanaRusa(2134, "Super Monataña Rusa", "Muy emocionante", TipoAtraccion.MONTANA_RUSA, 20, Duration.ofHours(1), new RequisitosAtraccion(15, 170));
+		MontanaRusa montanaRusa = new MontanaRusa(2134, "Super Monataña Rusa", "Muy emocionante",
+				TipoAtraccion.MONTANA_RUSA, 20, Duration.ofHours(1), new RequisitosAtraccion(15, 170));
 		List<Producto> productosGoiko = new ArrayList<>();
 		Producto hamburguesaNormal = new Producto(3412, "Hamburguesa normal", 100, 15);
 		productosGoiko.add(hamburguesaNormal);
 		Producto hamburguesaSinGluten = new Producto(3412, "Hamburguesa sin gluten", 100, 20);
 		productosGoiko.add(hamburguesaSinGluten);
 		Restaurante goiko = new Restaurante(1243, "Goiko", productosGoiko, TipoRestaurante.ESPANOL);
-		
+
 		montanaRusa.hacerReserva(visitante, "21/05/2026 a las 11:00");
 		goiko.hacerReserva(visitante, "21/05/2026 a las 14:00");
 		goiko.obtenerRecomendaciones(visitante);
-		
+
 		// 3) Acceso y Registro en Atracciones
-		//Logica de requisitos y usuarios de la atracion, dentro del metodo usarAtraccion
+		// Logica de requisitos y usuarios de la atracion, dentro del metodo
+		// usarAtraccion
 		montanaRusa.usarAtraccion(visitante);
-		
+
 		// 4) Servicios Complementarios
 		goiko.usarProducto(visitante, hamburguesaSinGluten);
-		
+
 		List<Producto> productosTiendaSouvenirs = new ArrayList<>();
 		Producto peluche = new Producto(4123, "Peluche", 500, 5);
 		productosTiendaSouvenirs.add(peluche);
 		Comercio tiendaSouvenirs = new Tienda(0, "Tienda de souvenirs", productosTiendaSouvenirs);
 		tiendaSouvenirs.usarProducto(visitante, peluche);
-		
+
 		// 5) Retroalimentación y Cierre de Visita
 		visitante.getBoleto().cierreDeVisita();
 	}
